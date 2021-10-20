@@ -3,11 +3,11 @@
     --black: #262626;
     --white: #FFFFFF;
     --light-gray: #F3F3F3;
-    --gray: #b6b6b6;
+    --gray: #636565;
     --blue: #4299E1;
     --red: #F56565;
     --orange: #ED8936;
-    --green: #38B2AC;
+    --teal: #38B2AC;
 
     --max-width: 55rem;
 }
@@ -30,18 +30,25 @@ html {
 
 h1 {
     font-size: 5rem;
-    line-height: 5rem;
-    margin-top: 0px;
+}
+h1 .accent, h1.accent {
+    color: var(--primary-color);
 }
 h2 {
-    font-size: 1.5rem;
-    margin-top: 0px;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--gray);
+}
+h2 .accent, h2.accent {
+    color: var(--black);
+    font-weight: bolder;
 }
 h3 {
     font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0px;
+    color: var(--gray);
+}
+h3 .accent, h3.accent {
+    color: var(--black);
+    font-weight: bolder;
 }
 
 #nav {
@@ -70,6 +77,11 @@ h3 {
 #nav-brand {
     margin-right: auto !important;
     color: var(--primary-color) !important;
+    height: 1.25rem;
+}
+#nav-brand img {
+    height: 100%;
+    width: auto;
 }
 
 #nav-content > a {
@@ -90,27 +102,23 @@ h3 {
     justify-content: center;
 }
 #hero-wrapper {
-    height: 100vh;
+    height: 75vh;
 
     margin-bottom: 10rem;
 
     position: relative;
-}
-
-#hero-wrapper .background-image{
-    position: absolute;
-    right: 0px;
-    width: 50%;
-    height: 100%;
 
     background-image: url(../img/give.jpg);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
-
-    z-index: -1;
 }
 
+
+#hero h1{
+    background-color: var(--white);
+    padding: 1rem 2rem;
+}
 #font-grid {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -213,8 +221,8 @@ h3 {
 .color-swatch.orange {
     background-color: var(--orange);
 }
-.color-swatch.green {
-    background-color: var(--green);
+.color-swatch.teal {
+    background-color: var(--teal);
 }
 
 #layout img {
@@ -233,9 +241,9 @@ ion-icon {
 }
 
 #logo-display {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 100%;
     justify-items: center;
@@ -245,7 +253,7 @@ ion-icon {
 
 #logo-display img {
     width: 100%;
-    max-width: 10rem;
+    max-height: 10rem;
     height: auto;
 
     box-sizing: border-box;
